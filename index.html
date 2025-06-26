@@ -47,6 +47,42 @@
       margin-left: 10px;
       cursor: pointer;
     }
+    .social{
+      background-color: #1f3d75;
+      color: white;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      padding: 10px 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    .survey-button {
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .survey-button:hover {
+      background-color: white;
+      color: #1f3d75;
+    }
+
+    .phone {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+    }
+
+    .phone i {
+      margin-right: 8px;
+      font-size: 16px;
+    }
     .nav-bar {
       background-color: #23488f;
       display: flex;
@@ -315,39 +351,125 @@
       font-weight: bold;
       text-decoration: none;
     }
-   
-.right1{
-  align-content:right;
-
-}
+    .right1{
+      align-content:right;
+    }
     @media (max-width: 768px) {
       .testimonial-container {
         flex-direction: column;
         align-items: center;
       }
     }
+.top-logos {
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
+    .top-logos img {
+      height: 60px;
+      margin: 10px 20px;
+    }
+    .footer {
+       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2e4f93;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      justify-content: space-between;
+    }
+    .footer-column {
+      flex: 1 1 300px;
+      margin: 20px;
+    }
+    .footer h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .footer a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 8px 0;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .social-icons {
+      margin: 20px 0;
+    }
+    .social-icons i {
+      font-size: 20px;
+      margin-right: 15px;
+    }
+    .footer-note {
+      font-size: 14px;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+    .message-form {
+      display: flex;
+      flex-direction: column;
+    }
+    .message-form input,
+    .message-form textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+    .message-form input[type="submit"] {
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+    }
+    .message-form input[type="submit"]:hover {
+      background-color: white;
+      color: #2e4f93;
+    }
+</style>
 </style>
 </head>
 <body>
+   <div class="social">
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-facebook"></i>
+    <a href="#form" class="survey-button">Pay Order</a>
+    <div class="phone">
+      <i class="fas fa-phone-alt"></i>
+      <span>6374424590</span>
+    </div>
+    </div>
   <div class="nav-bar">
     <div class="logo-container">
     <img src="Justice.jpg" alt="Logo">
   </div>
     <div class="menu">
-      <a href="#">HOME</a>
-      <a href="#">ABOUT</a>
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
       <a href="#">COMMERCIAL</a>
       <a href="#">PUBLIC SECTOR</a>
-      <a href="#">HOME SECURITY</a>
+      <a href="#">HOME SECURITY</a> 
       <a href="#"> RESOURCES</a>
       <a href="#"> NEWS</a>
       <a href="#"> CARRERS</a>
-      <a href="#">CONTACT US</a>
+      <a href="#contact">CONTACT US</a>
     </div>
   </div>
 
-  <div class="hero">
+  <div class="hero" id="home">
     ESTABLISHED FOR OVER 30 YEARS
   </div>
     <div class="services-section">
@@ -359,10 +481,10 @@
       <a href="#" class="read-more">READ MORE</a>
     </div>
     <div class="services-buttons">
-      <a href="#">Enquiry Form</a>
-      <a href="#">Book Your FREE Site Survey</a>
-      <a href="#">FREE Purchasers Guide</a>
-      <a href="#">Contact Us</a>
+      <a href="#form">Enquiry Form</a>
+      <a href="#form">Book Your FREE Site Survey</a>
+      <a href="#form">FREE Purchasers Guide</a>
+      <a href="#contact">Contact Us</a>
     </div>
   </div>
     <div class="service-section">
@@ -407,16 +529,15 @@
        <section class="read-more1">READ MORE
     </div>
   </section>  
-  <section class="moni">
- <center> <u><h2>TESTIMONIALS</h2></u></center><br>
+  <div class="moni">
+ <center> <u><h2 id="t2">TESTIMONIALS</h2></u></center><br>
   <div class="testimonial-container">
       <div class="testimonial-card">
       <img src="johnson_fellows_llp_logo.jpeg" alt="Johnson Fellows Logo">
       <h3>Johnson Fellows</h3>
       <div class="subtitle">CHRIS MONTEITH (FACILITIES MANAGER)<br>JOHNSON FELLOWS CHARTERED SURVEYORS</div>
       <p>"Justice Fire and Security have worked closely with Johnson Fellows for many years, their knowledge, value and advice set them apart from other suppliers."</p>
-    </div>
-
+      </div>
     <div class="testimonial-card">
       <img src="google.webp" alt="Google Logo">
       <h3>Google Reviews</h3>
@@ -434,5 +555,54 @@
     </div>
   </div>
   <center><a href="#" class="read-more2">READ MORE</a></center>
+  <div class="top-logos">
+  <img src="bafe-f.png" alt="BAFE Logo" />
+  <img src="BSIA_Logo-400x174.png" alt="BSIA Logo" />
+  <img src="fire.png" alt="FIA Logo" />
+  <img src="gold.jpeg" alt="GOLD Logo" />
+</div>
+
+<div class="footer">
+  <div class="footer-column" id="about">
+    <h3>ABOUT</h3>
+    <a href="#">About Us</a>
+    <a href="#">News</a>
+    <a href="#t2">Testimonials</a>
+    <div class="social-icons">
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-facebook"></i>
+    </div>
+    <div class="footer-note">
+      Registered Office and Accounts Unit A3 OYO Business Park, 187 Park Lane, Castle Vale,<br>
+      Birmingham B35 6AN Registered in England No: 02053612 VAT Reg No: 486 629 788
+      <br><br>
+      Telephone calls to our Offices may be recorded for training & Security purposes
+    </div>
+  </div>
+
+  <div class="footer-column" id="contact">
+    <h3>CONTACT US</h3>
+    <a href="#">6374424590</a>
+    <a href="#">akshathamoni3@gmail.com</a>
+    <a href="#">Privacy & Cookie Policy</a>
+    <a href="#">Policy Statements</a>
+  </div>
+
+  <div class="footer-column" id="form">
+    <h3>SEND US A MESSAGE</h3>
+    <form class="message-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea rows="4" placeholder="Message" required></textarea>
+      <div style="display: flex; align-items: center; gap: 10px; border: 1px solid #ccc; padding: 20px; background-color: white; width: 380px; color: black;">
+  <input type="checkbox" id="human-check" style="width: 25px; height: 20px;">
+  <label for="human-check" style="font-size: 16px;" >I am not Robot</label>
+</div><br>
+<input type="submit" value="Submit">
+</form>
+</div>
+</div>
 </body>
 </html>
